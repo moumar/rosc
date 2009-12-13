@@ -1,6 +1,9 @@
 require 'rake/testtask'
 require 'rake/rdoctask'
 
+require 'echoe'  
+Echoe.new('rosc')
+
 task :default => :rdoc
 Rake::RDocTask.new do |rd|
   rd.rdoc_files.add ['README','AUTHORS','TODO','lib/**/*.rb']
